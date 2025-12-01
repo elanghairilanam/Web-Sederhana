@@ -1,0 +1,159 @@
+body {
+  background-image: url(img/background.webp);
+}
+
+.container {
+  background-color: white;
+  padding: 0 5px;
+  margin: 0 auto;
+  width: 960px;
+}
+.container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width: 960px;
+}
+.container .header .my-brand {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+.container .header .my-brand h1 {
+  margin: 0;
+  line-height: 40px;
+}
+.container .header .my-brand .search-col {
+  display: flex;
+  align-items: center;
+}
+.container .header .my-brand .search-col .btn-search {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .header .nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.container .header .nav .list-items {
+  line-height: 0.8;
+  transition: 0.3s linear;
+}
+.container .header .nav .list-items a {
+  text-decoration: none;
+  color: red;
+}
+.container .header .nav .list-items:hover {
+  transform: translateY(-2px);
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px -1px gray;
+}
+.container .hero-img {
+  border-top: 5px solid lightskyblue;
+  border-bottom: 5px solid lightcoral;
+  height: 300px;
+}
+.container .hero-img .img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .content {
+  /* border: 1px solid black; */
+}
+.container .content .main-content {
+  width: 630px;
+  float: left;
+}
+.container .content .main-content p.info-artikel {
+  text-indent: 0;
+  margin-top: -20px;
+  font-size: 14px;
+  color: gray;
+}
+.container .content .main-content p.info-artikel a {
+  text-decoration: none;
+  color: red;
+}
+.container .content .main-content p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  text-indent: 10px;
+}
+.container .content .sidebar {
+  padding: 0 5px;
+  margin-top: 10px;
+  width: 300px;
+  float: right;
+}
+.container .content .sidebar .about-author {
+  background-color: whitesmoke;
+  padding: 0 5px;
+}
+.container .content .sidebar .about-author .pp {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.container .content .sidebar .about-author .pp img {
+  width: 100%;
+  height: 100%;
+}
+.container .content .sidebar .about-author p {
+  font-size: 14px;
+  text-align: justify;
+}
+.container .content .sidebar .similar-content {
+  padding: 0 5px;
+}
+.container .content .sidebar .similar-content h3 {
+  margin-top: 0;
+}
+.container .content .sidebar .similar-content .img-similar-content {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  cursor: pointer;
+}
+.container .content .sidebar .similar-content a {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+.container .content .sidebar .similar-content a:hover {
+  color: blue;
+}
+.container footer {
+  font-size: 13px;
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1;
+}/*# sourceMappingURL=style.css.map */

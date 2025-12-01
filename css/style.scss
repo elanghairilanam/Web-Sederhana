@@ -1,0 +1,205 @@
+body{
+    background-image: url(img/background.webp);
+}
+
+.container{
+    background-color: white;
+    padding: 0 5px;
+    margin: 0 auto;
+    width: 960px;
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        width: 960px;
+
+        .my-brand{
+            display: flex;
+            justify-content: space-between;
+            height: 40px;
+
+            h1{
+                margin: 0;
+                line-height: 40px;
+            }
+
+            .search-col{
+                display: flex;
+                align-items: center;
+
+                .btn-search{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .search-input{
+
+                }
+            }
+        }
+
+        .nav{
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+
+            .list-items{
+                line-height: 0.8;
+                transition: 0.3s linear;
+
+                a{
+                    text-decoration: none;
+                    color: red;
+                }
+            }
+
+            .list-items:hover{
+                transform: translateY(-2px);
+                border-radius: 2px;
+                box-shadow: 0px 2px 2px -1px gray;
+            }
+        }
+    }
+
+    .hero-img{
+        border-top: 5px solid lightskyblue;
+        border-bottom: 5px solid lightcoral;
+        height: 300px;
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content{
+        /* border: 1px solid black; */
+
+        .main-content{
+            width: 630px;
+            float: left;
+
+            .judul-artikel{
+
+            }
+
+            p.info-artikel{
+                text-indent: 0;
+                margin-top: -20px;
+                font-size: 14px;
+                color: gray;
+
+                a{
+                    text-decoration: none;
+                    color: red;
+                }
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                text-align: justify;
+                text-indent: 10px;
+            }
+        }
+
+        .sidebar{
+            padding: 0 5px;
+            margin-top: 10px;
+            width: 300px;
+            float: right;
+
+            .about-author{
+                background-color:whitesmoke;
+                padding: 0 5px;
+
+                .pp{
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    float: left;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                p{
+                    font-size: 14px;
+                    text-align: justify;
+                }
+                
+            }
+
+            .similar-content{
+                padding: 0 5px;
+
+                h3{
+                    margin-top: 0;
+                }
+
+                .img-similar-content{
+                    width: 100%;
+                    height: 100px;
+                    object-fit: fill;
+                    cursor: pointer;
+                }
+
+                a{
+                    font-size: 15px;
+                    text-decoration: none;
+                    color: black;
+                }
+
+                a:hover{
+                    color: blue;
+                }
+            }
+        }
+    }
+
+    footer{
+        font-size: 13px;
+        text-align: center;
+        font-weight: lighter;
+        font-style: italic;
+        color: gray;
+    }
+}
+
+// animation :
+    // [name] : Nama dari keyframes yang akan dipakai. Contoh: @keyframes fadeIn { ... } lalu dipanggil dengan animation-name: fadeIn.
+    // [duration] : Lama waktu animasi berlangsung (misalnya 2s atau 500ms).
+    // [timing-function] : Kurva percepatan animasi. Contoh: ease, linear, ease-in, ease-out, cubic-bezier(...).
+    // [delay] : Waktu tunda sebelum animasi mulai. Contoh: 1s berarti animasi mulai setelah 1 detik.
+    // [iteration-count] : Jumlah pengulangan animasi. Bisa angka (3) atau infinite.
+    // [direction] : Arah animasi: normal (default), reverse, alternate (bolak-balik), alternate-reverse.
+    // [file-mode] : Menentukan gaya element sebelum dan sesudah animasi. Nilai: none, forwards, backwards, both.
+    // [play-state] : Status animasi: running atau paused. Bisa dipakai untuk menghentikan animasi sementara.
+
+// Clearfix Hack
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1; 
+}
