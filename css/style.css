@@ -57,6 +57,8 @@ body {
   border-top: 5px solid lightskyblue;
   border-bottom: 5px solid lightcoral;
   height: 300px;
+  -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 .container .hero-img .img {
   width: 100%;
@@ -110,6 +112,39 @@ body {
   width: 100%;
   height: 100%;
 }
+.container .content .sidebar .about-author .overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.container .content .sidebar .about-author .overlay .overlay-content {
+  box-sizing: border-box;
+  width: 350px;
+  margin: 40px auto 0;
+  position: relative;
+  animation: zoom 0.3s ease-out;
+}
+.container .content .sidebar .about-author .overlay .overlay-content .close {
+  position: absolute;
+  text-decoration: none;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+}
+.container .content .sidebar .about-author .overlay .overlay-content img {
+  cursor: default;
+}
+.container .content .sidebar .about-author .overlay:target {
+  display: block;
+  right: 0;
+  bottom: 0;
+}
 .container .content .sidebar .about-author p {
   font-size: 14px;
   text-align: justify;
@@ -143,6 +178,14 @@ body {
   color: gray;
 }
 
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .clearfix::before,
 .clearfix::after {
   content: "";

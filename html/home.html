@@ -6,6 +6,7 @@
     <title>ArtikelKu</title>
     <!-- <link rel="stylesheet" href="../css/reset.css"> -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="/favicon.ico/favicon.svg" type="image/x-icon">
   </head>
   <body>
     <div class="container">
@@ -62,7 +63,15 @@
         <div class="sidebar">
           <div class="about-author">
             <div class="pp">
-              <img src="../img/sidebar/pp.jpg" alt="Profile Picture">
+              <a href="#pp-full">
+                <img src="../img/sidebar/pp.jpg" alt="Profile Picture">
+              </a>
+              <div class="overlay" id="pp-full">
+                <div class="overlay-content">
+                  <a href="#" class="close">x</a>
+                  <img src="../img/sidebar/pp.jpg" alt="Pofile Picture">
+                </div>
+              </div>
             </div>
             <p>
               Halo! Perkenalkan nama saya Elang. Saya seorang web developer pemula yang sedang belajar membuat website sederhana
