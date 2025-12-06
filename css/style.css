@@ -20,38 +20,43 @@ body {
 .container .header .my-brand {
   display: flex;
   justify-content: space-between;
-  height: 40px;
 }
 .container .header .my-brand h1 {
   margin: 0;
   line-height: 40px;
 }
-.container .header .my-brand .search-col {
+.container .header .my-brand .right-header {
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  align-items: last baseline;
 }
-.container .header .my-brand .search-col .btn-search {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.container .header .nav {
+.container .header .my-brand .right-header .nav {
+  width: 400px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   margin-bottom: 10px;
 }
-.container .header .nav .list-items {
-  line-height: 0.8;
+.container .header .my-brand .right-header .nav .list-items {
   transition: 0.3s linear;
 }
-.container .header .nav .list-items a {
+.container .header .my-brand .right-header .nav .list-items a {
   text-decoration: none;
   color: red;
 }
-.container .header .nav .list-items:hover {
+.container .header .my-brand .right-header .nav .list-items:hover {
   transform: translateY(-2px);
   border-radius: 2px;
   box-shadow: 0px 2px 2px -1px gray;
+}
+.container .header .my-brand .right-header .search-col {
+  display: flex;
+  align-items: center;
+}
+.container .header .my-brand .right-header .search-col .btn-search {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .container .hero-img {
   border-top: 5px solid lightskyblue;
@@ -67,11 +72,14 @@ body {
      object-fit: cover;
 }
 .container .content {
-  /* border: 1px solid black; */
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
 }
 .container .content .main-content {
   width: 630px;
-  float: left;
+  box-sizing: border-box;
 }
 .container .content .main-content p.info-artikel {
   text-indent: 0;
@@ -93,7 +101,7 @@ body {
   padding: 0 5px;
   margin-top: 10px;
   width: 300px;
-  float: right;
+  box-sizing: border-box;
 }
 .container .content .sidebar .about-author {
   background-color: whitesmoke;
@@ -185,18 +193,4 @@ body {
   100% {
     transform: scale(1);
   }
-}
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-.clearfix {
-  /* For IE 6/7 (trigger hasLayout) */
-  zoom: 1;
 }/*# sourceMappingURL=style.css.map */

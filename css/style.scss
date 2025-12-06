@@ -20,49 +20,55 @@ body{
         .my-brand{
             display: flex;
             justify-content: space-between;
-            height: 40px;
 
             h1{
                 margin: 0;
                 line-height: 40px;
             }
 
-            .search-col{
+            .right-header{
+                box-sizing: border-box;
                 display: flex;
-                align-items: center;
+                align-items: last baseline;
 
-                .btn-search{
-                    background-color: transparent;
-                    border: none;
-                    cursor: pointer;
+                .nav{
+                    width: 400px;
+                    display: flex;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+
+                    margin-bottom: 10px;
+
+                    .list-items{
+                        transition: 0.3s linear;
+
+                        a{
+                            text-decoration: none;
+                            color: red;
+                        }
+                    }
+
+                    .list-items:hover{
+                        transform: translateY(-2px);
+                        border-radius: 2px;
+                        box-shadow: 0px 2px 2px -1px gray;
+                    }
                 }
 
-                .search-input{
+                .search-col{
+                    display: flex;
+                    align-items: center;
 
+                    .btn-search{
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .search-input{
+
+                    }
                 }
-            }
-        }
-
-        .nav{
-            display: flex;
-            justify-content: space-between;
-
-            margin-bottom: 10px;
-
-            .list-items{
-                line-height: 0.8;
-                transition: 0.3s linear;
-
-                a{
-                    text-decoration: none;
-                    color: red;
-                }
-            }
-
-            .list-items:hover{
-                transform: translateY(-2px);
-                border-radius: 2px;
-                box-shadow: 0px 2px 2px -1px gray;
             }
         }
     }
@@ -80,11 +86,14 @@ body{
     }
 
     .content{
-        /* border: 1px solid black; */
+        padding: 5px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
 
         .main-content{
             width: 630px;
-            float: left;
+            box-sizing: border-box;
 
             .judul-artikel{
 
@@ -114,7 +123,7 @@ body{
             padding: 0 5px;
             margin-top: 10px;
             width: 300px;
-            float: right;
+            box-sizing: border-box;
 
             .about-author{
                 background-color:whitesmoke;
@@ -226,21 +235,4 @@ body{
     100%{
         transform: scale(1);
     }
-}
-
-// Clearfix Hack
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-.clearfix {
-  /* For IE 6/7 (trigger hasLayout) */
-  zoom: 1; 
 }
