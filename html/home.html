@@ -10,35 +10,30 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <div class="my-brand">
-            <h1>ArtikelKu</h1>
-            <div class="right-header">
-              <div class="nav">
-                <div class="list-items">
-                  <a href="home.html">Home</a>
-                </div>
-                <div class="list-items">
-                  <a href="about.html"> About</a>
-                </div>
-                <div class="list-items">
-                  <a href="products.html"> Products</a>
-                </div>
-                <div class="list-items">
-                  <a href="services.html"> Services</a>
-                </div>
-                <div class="list-items">
-                  <a href="contact.html"> Contact</a>
-                </div>
-              </div>
-              <div class="search-col">
-                <button type="submit" class="btn-search">
-                  <img src="../img/header/search.svg" alt="button search icon" class="button-search-icon"/>
-                </button>
-                <input type="text" class="search-input" placeholder="Cari...">
-              </div>
-            </div>
-        </div>
+      <div class="nav">
+        <ul class="navbar-items">
+          <li><h1>Artikelku</h1></li>
+          <li class="hideOnMobile"><a href="home.html">Home</a></li>
+          <li class="hideOnMobile"><a href="about.html"> About</a></li>
+          <li class="hideOnMobile"><a href="products.html"> Products</a></li>
+          <li class="hideOnMobile"><a href="contact.html"> Contact</a></li>
+          <li>
+            <button class="btn-search"></button>
+          </li>
+          <li>
+            <input type="text" placeholder="Cari dah klo ngga nemu">
+          </li>
+          <li>
+            <img src="../img/header/menu.svg" alt="" class="btn-menu" onclick="showSideBar()">
+          </li>
+        </ul>
+        <ul class="side-navbar">
+          <li><img src="../img/header/close.svg" alt="" onclick="hideSideBar()"></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="products.html"> Products</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+        </ul>
       </div>
       <div class="hero-img">
         <img src="../img/hero/hero-img.jpg" alt="Hero Image" class="img"/>
@@ -101,6 +96,8 @@
       <footer>
         <p>Copyright © 2025 Elang Website</p>
       </footer>
+
+      <script src="../js/script.js"></script>
     </div>
   </body>
 </html>

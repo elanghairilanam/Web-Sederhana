@@ -6,64 +6,113 @@ body {
   background-color: white;
   padding: 0 5px;
   margin: 0 auto;
-  width: 960px;
+  width: 75%;
 }
-.container .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: sticky;
-  top: 0;
+.container .nav {
   background-color: white;
-  width: 960px;
-}
-.container .header .my-brand {
-  display: flex;
-  justify-content: space-between;
-}
-.container .header .my-brand h1 {
-  margin: 0;
-  line-height: 40px;
-}
-.container .header .my-brand .right-header {
-  box-sizing: border-box;
-  display: flex;
-  align-items: last baseline;
-}
-.container .header .my-brand .right-header .nav {
-  width: 400px;
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-.container .header .my-brand .right-header .nav .list-items {
-  transition: 0.3s linear;
-}
-.container .header .my-brand .right-header .nav .list-items a {
-  text-decoration: none;
-  color: red;
-}
-.container .header .my-brand .right-header .nav .list-items:hover {
-  transform: translateY(-2px);
-  border-radius: 2px;
-  box-shadow: 0px 2px 2px -1px gray;
-}
-.container .header .my-brand .right-header .search-col {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container .header .my-brand .right-header .search-col .btn-search {
+.container .nav .navbar-items {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+.container .nav .navbar-items h1 {
+  margin: 0;
+  padding: 0;
+}
+.container .nav .navbar-items li {
+  margin: 0;
+  padding: 0;
+}
+.container .nav .navbar-items li:first-child {
+  margin-right: auto;
+}
+.container .nav .navbar-items li a {
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 0 2vw;
+  overflow: hidden;
+}
+.container .nav .navbar-items li a::before, .container .nav .navbar-items li a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: salmon;
+  display: block;
+  transition: 0.5s linear;
+}
+.container .nav .navbar-items li a::before {
+  transform: translateY(-5px);
+}
+.container .nav .navbar-items li a::after {
+  transform: translateY(5px);
+}
+.container .nav .navbar-items li a:hover::before {
+  transform: translateY(2px);
+}
+.container .nav .navbar-items li a:hover::after {
+  transform: translateY(-2px);
+}
+.container .nav .navbar-items li .btn-search {
+  background-image: url(../img/header/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
+  border: 0;
+}
+.container .nav .navbar-items li .btn-menu {
+  display: none;
+}
+.container .nav .side-navbar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: fixed;
+  justify-content: flex-start;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background-color: lightgray;
+  z-index: 999;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  transform: translateX(200px);
+  transition: 0.3s linear;
+}
+.container .nav .side-navbar li {
+  width: 100%;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
+}
+.container .nav .side-navbar li:first-child {
+  text-align: left;
+}
+.container .nav .side-navbar a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
 }
 .container .hero-img {
   border-top: 5px solid lightskyblue;
   border-bottom: 5px solid lightcoral;
   height: 300px;
-  -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0));
-          mask-image: linear-gradient(rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 .container .hero-img .img {
   width: 100%;
@@ -192,5 +241,13 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+@media (max-width: 800px) {
+  .container .nav .navbar-items .hideOnMobile {
+    display: none;
+  }
+  .container .nav .navbar-items li img.btn-menu {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
