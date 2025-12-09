@@ -1,7 +1,3 @@
-body {
-  background-image: url(img/background.webp);
-}
-
 .container {
   background-color: white;
   padding: 0 5px;
@@ -37,6 +33,7 @@ body {
 }
 .container .nav .navbar-items li:first-child {
   margin-right: auto;
+  cursor: pointer;
 }
 .container .nav .navbar-items li a {
   box-sizing: border-box;

@@ -1,5 +1,5 @@
 body{
-    background-image: url(img/background.webp);
+
 }
 
 .container{
@@ -38,6 +38,7 @@ body{
                 
                 &:first-child{
                     margin-right: auto;
+                    cursor: pointer;
                 }
 
                 a{
