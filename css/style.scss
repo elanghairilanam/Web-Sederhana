@@ -292,23 +292,7 @@ body{
     }
 }
 
-@media (max-width:800px) {
-    .container{
-        .nav{
-            .navbar-items{
-                .hideOnMobile{
-                    display: none;
-                }
-
-                li img.btn-menu{
-                    display: block;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 360px) and (max-width:400px) {
+@media screen and (min-width: 360px) {
     .container{
         width: 100%;
 
